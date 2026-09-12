@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mochi — The Infinitely Pointless Pet</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <header>
+    <h1><span id="petEmoji">🐱</span> Mochi</h1>
+    <div class="controls">
+      <button class="btn" id="customizeBtn">🎨</button>
+      <button class="btn" id="muteBtn">🔊</button>
+      <button class="btn" id="darkBtn">🌙</button>
+      <button class="btn" id="resetBtn">↺</button>
+    </div>
+  </header>
+
+  <div id="customizePanel">
+    <div>
+      <div class="panelLabel">Pet</div>
+      <div class="swatchRow" id="animalRow">
+        <button class="animalBtn" data-animal="cat" title="Cat">🐱</button>
+        <button class="animalBtn" data-animal="dog" title="Dog">🐶</button>
+        <button class="animalBtn" data-animal="bunny" title="Bunny">🐰</button>
+        <button class="animalBtn" data-animal="bear" title="Bear">🐻</button>
+      </div>
+    </div>
+    <div>
+      <div class="panelLabel">Color</div>
+      <div class="swatchRow" id="colorRow">
+        <button class="colorSwatch" data-color="white" style="background:#ffffff" title="White"></button>
+        <button class="colorSwatch" data-color="black" style="background:#3d3a42" title="Black"></button>
+        <button class="colorSwatch" data-color="ginger" style="background:#ffb46b" title="Ginger"></button>
+        <button class="colorSwatch" data-color="grey" style="background:#d7dbe0" title="Grey"></button>
+        <button class="colorSwatch" data-color="brown" style="background:#b98a63" title="Brown"></button>
+        <button class="colorSwatch" data-color="pink" style="background:#ffd1e8" title="Pink"></button>
+        <button class="colorSwatch locked" data-color="gold" style="background:linear-gradient(135deg,#fff3c2,#ffb84d)" title="Golden (unlock at 150 pts)">🔒</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="scorebar">
+    <div class="stat">Score<span class="num" id="scoreNum">0</span></div>
+    <div class="stat">Combo<span class="num" id="comboNum">x1</span></div>
+    <div class="stat">Best<span class="num" id="bestNum">0</span></div>
+    <div class="stat">Happy<span class="num" id="happyNum">80%</span></div>
+  </div>
+
+  <div id="goldenBadge">✨ GOLDEN COLOR UNLOCKED ✨</div>
+
+  <div id="blobWrap">
+    <div id="kitten" class="animal-cat">
+      <div id="speechBubble"></div>
+      <div id="tail"></div>
+      <div id="body">
+        <div id="bellyPatch"></div>
+        <div id="collar"><div id="collarTag"></div></div>
+        <div class="paw" id="pawL"></div>
+        <div class="paw" id="pawR"></div>
+      </div>
+      <div id="head">
+        <div class="ear" id="earL"></div>
+        <div class="ear" id="earR"></div>
+        <div id="bow"><div id="bowKnot"></div></div>
+        <div class="blush" id="blushL"></div>
+        <div class="blush" id="blushR"></div>
+        <div id="muzzle"></div>
+        <div class="eye" id="eyeL"></div>
+        <div class="eye" id="eyeR"></div>
+        <div id="nose"></div>
+        <div id="teeth"></div>
+        <div id="mouth"></div>
+        <div class="whiskers" id="whiskL"><span></span><span></span><span></span></div>
+        <div class="whiskers" id="whiskR"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div id="actionRow">
+      <button class="actionBtn" id="treatBtn">🍖 Treat</button>
+      <button class="actionBtn" id="playBtn">🧶 Play</button>
+    </div>
+    <div id="talkRow">
+      <input id="talkInput" type="text" placeholder="say something to Mochi..." maxlength="60">
+      <button id="talkBtn">Talk</button>
+    </div>
+    <div id="hint">click to pet · drag to stretch · double‑click for zoomies · scroll for bow color · 🎨 to customize</div>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
